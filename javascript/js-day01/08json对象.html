@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 如果是值的话必须通过方括号读取，如果是变量的话用小括号读取
+
+        /* json对象 key//{},value的形式出现的 */
+        var wang={
+            "name":"wangsiman",
+            age:20,
+            sex:"女"
+        }
+        /* 2.读取对象属性的值 */
+        console.log(wang.name)
+       /* Tip:如果属性名是变量的情况下，使用中括号去读取 */ 
+        console.log(wang["name"])
+        /* 3.给对象新添加一个属性 */
+        wang.love="听电台"
+        console.log(wang)
+        /* 4.读取对象所有的属性  object.keys(obj)*/
+        console.log(Object.keys(wang))
+        /* 5.读取对象所有的value值 Object.values(obj) */
+        console.log(Object.values(wang))
+        /* 6.如何对一个变量进行遍历 for in方法  */
+        for(var key in wang){
+            console.log(key)
+            console.log(wang["key"])
+        }
+        
+    </script>
+</body>
+</html>

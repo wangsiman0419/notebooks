@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/https.js"></script>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"><br>
+        <img src="" alt=""><br>
+        <audio src=""controls autoplay></audio>
+    </div>
+    <script>
+        /* 获取id */
+        $("input").keyup(function(event){   //keyup:键盘弹起
+            if(event.keyCode==13){      //13:键盘码
+                var value=$(this).val()
+                https({
+                    url:`search?keywords=${value}`,
+                    callback:getId
+                })    
+
+
+                function getId(res){
+                    var id=res.result.songs[0].id;
+                    /* 获取imgUrl */
+                    https({
+                        url:`song/detail?ids=${id}`,
+                        callback:getImgUrl
+                    })
+                    /* 获取musicUrl */
+                    https({
+                        url:`song/url?id=${id}`,
+                        callback:getMusicUrl
+                    })
+                }
+                function getImgUrl(res){
+                    var imgUrl=res.songs[0].al.picUrl;
+                    $("img").attr("src",imgUrl)
+                }
+                function getMusicUrl(res){
+                    var musicUrl=res.data[0].url;
+                    $("audio").attr("src",musicUrl)
+                }
+            }
+        })          
+    </script>
+</body>
+</html>

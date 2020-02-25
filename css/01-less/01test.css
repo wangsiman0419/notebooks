@@ -1,0 +1,64 @@
+/* 4.Maps */
+body {
+  background: "#999";
+  color: #337ab7;
+}
+/* 2.mixin  --一大段复用的css代码 */
+.one {
+  width: 100px;
+  height: 150px;
+  /* 3.嵌套 本质上后代 */
+}
+.one:hover {
+  color: red;
+}
+.one .child {
+  border: 1px solid #333;
+}
+.two,
+.four {
+  width: 150px;
+  height: 150px;
+}
+.three {
+  width: 50%;
+}
+.four {
+  border: 1px solid #333;
+}
+.col-12 {
+  width: 100%;
+}
+.col-11 {
+  width: 91.66666667%;
+}
+.col-10 {
+  width: 83.33333333%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-8 {
+  width: 66.66666667%;
+}
+.col-7 {
+  width: 58.33333333%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-5 {
+  width: 41.66666667%;
+}
+.col-4 {
+  width: 33.33333333%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-2 {
+  width: 16.66666667%;
+}
+.col-1 {
+  width: 8.33333333%;
+}

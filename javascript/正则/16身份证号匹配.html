@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- 身份证号匹配
+      18位
+      ....x
+      \d{17}[0-9xX]
+    -->
+    <div id="app">
+        请输入您的身份证号码:<input type="text" v-model="keyword" @keyup.enter="handleEnter"> 
+
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                keyword:""
+            },
+            methods: {
+                handleEnter(){
+                    var reg=/^\d{17}[0-9xX]$/;
+                    if(!reg.test(this.keyword.trim())){
+                        alert("身份证号码不正确")
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>

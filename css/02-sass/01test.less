@@ -1,0 +1,12 @@
+/* 获取宽高 */
+.wh(@w:100px,@h:100px){
+   width: @w;
+   height: @h;
+}
+.one{
+    .wh()
+}
+/* 继承 */
+.block:extend(.one){
+    
+}

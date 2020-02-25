@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{
+            width: 30px;
+            height: 30px;
+        }
+        input::after{
+            content: url('images/unshift.png');
+        }
+        input:checked::after{
+            content: url('images/shift.png');
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox"><label>vue</label>
+</body>
+</html>

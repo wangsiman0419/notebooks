@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* css样式  odd偶数  even奇数 */
+        /* li:nth-child(odd){
+            color: pink;
+        }
+        li:nth-child(even){
+            color: green;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 偶数项字体颜色为粉色  奇数项字体颜色为绿色 -->
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var lis=document.getElementsByTagName("li")
+        /* 1.对li进行遍历 */
+        for(var i=0;i<lis.length;i++){
+            /* 2.下标值取余%2  为零的情况为偶数 */
+            if(i%2==0){
+                lis[i].style.color="pink"
+            }else{
+                lis[i].style.color="green"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p name="test" class="one two">hello world</p>
+    <script>
+        /* 
+        id  直接获取的元素
+        class,tagName   HTMLCollection html集合
+        name , querySelector  通过选择器获取  nodelist
+        */
+        /* 通过name nodelist  节点的集合 */
+        var p=document.getElementsByTagName('p');
+        var test=document.getElementsByName("test")
+        var one=document.querySelectorAll('.one');
+        var two=document.getElementsByClassName('two');
+        console.log(p)
+        console.log(test)
+        console.log(one)
+        console.log(two)
+    </script>
+</body>
+</html>

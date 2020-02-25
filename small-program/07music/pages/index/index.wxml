@@ -1,0 +1,7 @@
+<view class="container">
+   <view class="item" wx:for="{{movies}}" wx:key="{{item.id}}">
+    <image src="{{item.images.small}}"></image>
+    <text>{{item.title}}</text>
+   </view>
+</view>
+<view class="end" wx:if="{{isEnd}}">已经到达底部</view>

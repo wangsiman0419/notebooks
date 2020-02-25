@@ -1,0 +1,4 @@
+<view class="container-grid">
+    <v-item wx:for="{{data}}" data="{{item}}" wx:key="{{item}}">
+    </v-item>
+ </view>

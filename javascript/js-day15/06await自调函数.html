@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="lib/http-promise.js"></script>
+</head>
+<body>
+    <script>
+        /* 自调1.0 */
+        /* (function(){
+            console.log(1)
+        })() */
+        /* 自调2.0 */
+       /*   (()=>{
+            console.log(1)
+         })()   */
+         (async function(){
+             var data=await httpGetCat("日语");   //第一个页面的数据
+             let id=data.playlists[0].id;        //第一个页面下playlists下的id
+             var res=await httpGetDetail(id)
+             console.log(res)
+         })();
+    </script>
+</body>
+</html>

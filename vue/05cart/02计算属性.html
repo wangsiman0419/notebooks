@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        min:最小直到1就不能再减少了
+        v-model.number:只能输入number类型的
+    -->
+    <div id="app">
+         价格: <input type="number" min="1" v-model.number="price" />
+         数量: <input type="number" min="1" v-model.number="count" />
+         总价：{{total}}
+    </div>
+    <script>
+       var vm=new Vue({
+           el:"#app",
+           data:{
+               price:6,
+               count:5
+           },
+           computed:{
+               total(){
+                   return this.price*this.count
+               }
+           }
+       })
+    </script>
+</body>
+</html>

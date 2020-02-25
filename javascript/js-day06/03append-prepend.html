@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+         think you 
+        <p>hello world</p>
+    </div>
+    <script>
+        /* 
+        prepend()--在父元素的第一位增加元素
+        append()--在父元素的最后一位添加元素
+        */
+        var parent=document.getElementById("parent");
+        var h1=document.createElement("h1");
+        h1.innerHTML="前面"
+        parent.prepend(h1)
+        parent.append("后面")
+    </script>
+    <!-- 显示效果  
+        前面
+        think you 
+        hello world
+        后面
+     -->
+</body>
+</html>

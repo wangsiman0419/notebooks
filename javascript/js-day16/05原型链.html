@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 如果一个对象自身没有一个方法，它就会从它的原型上去找 */
+        /* object.prototype是终点，是源头 */
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }  
+        Person.prototype.sayAge=function(){
+            console.log(this.age)
+        }  
+        var wang=new Person("wangsiman",18);
+        console.log(wang)
+        console.log(wang.__proto__)
+        console.log(wang.__proto__==Person.prototype)
+        wang.sayAge(wang.toString())
+    </script>
+</body>
+</html>

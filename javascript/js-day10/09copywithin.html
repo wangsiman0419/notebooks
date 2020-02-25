@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        var arr=['html','css','javascript','vue']
+        var newArr=arr.copyWithin(2,1)
+        console.log(newArr)   //['html','css','css','javascript']
+
+        var arr=[1,2,3,4,5];
+        var num=arr.some(item=>{   //some()：测试是否至少有一个元素可以满足某个条件。返回一个Boolean类型的值。
+            return item>3
+        })
+        var str=arr.every(item=>{  //every():测试一个数组内的所有元素是否都能满足某个条件。它返回一个布尔值。
+            return item>2
+        })
+        var value=arr.find(item=>{   //find():返回第一个满足条件的值
+            return item>4
+        })
+        console.log(num)   //true
+        console.log(str)  //false
+        console.log(value)   //5
+    </script> 
+    
+</body>
+</html>

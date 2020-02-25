@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 重载：根据传入参数不一样，动态决定调用哪一种方法 
+            原因:js不支持重载，重复声明，就被覆盖掉了
+            可以使用arguments对象模拟重载
+        */
+        function go(a,b){
+            console.log(a+b)
+        }
+       function go(a){
+            console.log(a);
+        }
+
+        function show(){
+           if(arguments.length==2){
+               console.log(arguments[0]+arguments[1])
+           }else if(arguments.length==1){
+               console.log(arguments[0])
+           }
+        } 
+           show(20)   //20
+           show(20,30)    //50 */
+
+       /*eg:
+         var a=20;
+        var a=30;   //此时a的值为30 */
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/* 1.变量 */
+div {
+  background: red;
+}
+
+/* 2.嵌套 */
+.container {
+  background: red;
+}
+
+.container .child {
+  font-size: 12px;
+}
+
+.container:hover {
+  color: yellow;
+}
+
+/* 3.mixin */
+.one {
+  width: 100px;
+  height: 100px;
+}
+
+/* 4.继承 */
+.block, .nav {
+  width: 200px;
+  height: 200px;
+}
+
+/* 5.if-else */
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 6.for */
+.col-1 {
+  width: 100% 12;
+}
+
+.col-2 {
+  width: 100% 24;
+}
+
+.col-3 {
+  width: 100% 36;
+}
+
+.col-4 {
+  width: 100% 48;
+}
+
+.col-5 {
+  width: 100% 60;
+}
+
+.col-6 {
+  width: 100% 72;
+}
+
+.col-7 {
+  width: 100% 84;
+}
+
+.col-8 {
+  width: 100% 96;
+}
+
+.col-9 {
+  width: 100% 108;
+}
+
+.col-10 {
+  width: 100% 120;
+}
+
+.col-11 {
+  width: 100% 132;
+}
+
+.col-12 {
+  width: 100% 144;
+}
+
+/* 7.while */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <script>
+        /* 
+        javascript出于同源策略的限制：不允许从一个域访问另一个预付的对象
+        客户端跨域方法：
+        1.jsonp
+        2.script标签  因为script标签不受同源策略的限制
+        3.修改客户端的Access-Control-Allow-Origin属性  改为 Access-Control-Allow-Origin,"*"
+        */
+        var url="https://douban.uieee.com/v2/movie/top250";
+      /*   $.ajax({
+            url,
+            type:"get",
+            dataType:"jsonp",
+            success:res=>{
+                console.log(res)
+            }
+        })  */
+        var script=document.createElement("script");
+        script.src=url+"?callback=handleData";
+        document.body.append(script)
+        function handleData(res){
+            console.log(res)
+        }
+    </script>
+</body>
+</html>

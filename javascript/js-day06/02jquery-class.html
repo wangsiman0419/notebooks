@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <style>
+      .current{
+          background: red;
+      }
+    </style>
+</head>
+<body>
+    <p>hello world</p>
+    <button id="add">addClass</button>
+    <button id="remove">removeClass</button>
+    <button id="toggle">toggleClass</button>
+    <button id="delete">delete</button>
+    <script>
+        /* 
+        addClass()  --添加一个class
+        removeClass()  --移除一个class
+        toggleClass()  --将某个class移入/移除当前元素
+        hasClass()  --检查被选元素是否包含指定的class
+        */ 
+       /* remove() 让元素从页面上消失*/
+       $("#add").click(function(){
+           $("p").addClass("current")
+       })
+       $("#remove").click(function(){
+           $("p").removeClass("current")
+       })
+       $("#toggle").click(function(){
+        //    $("p").toggleClass("current")
+        if($("p").hasClass("current")){
+            $("p").removeClass("current")
+        }else{
+            $("p").addClass("current")
+        }
+       })
+       $("#delete").click(function(){
+          $("p").remove()
+       })
+    </script>
+</body>
+</html>

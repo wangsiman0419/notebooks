@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 引用类型 
+        他会占据两块内存空间
+        */
+       /* 
+       1.引用类型的值是一个对象，它保存在堆内存中
+       2.包含引用类型的值的变量不是实际对象本身，它是一个指针，指向实际对象
+       3.在赋值运算中，复制的其实是指针，因此两个变量最终都指向同一个对象
+       */
+        // var arr=[1,2,3,4];
+        // obj=arr;
+        // obj.push(5);
+        // console.log(arr);   //1,2,3,4,5
+        var obj1 = {age:19}
+        var obj2 = obj1;
+        obj2.name = "我有名字了";
+        console.log(obj1.name); // 我有名字了
+    </script>
+</body>
+</html>

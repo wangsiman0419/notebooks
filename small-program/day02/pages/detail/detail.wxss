@@ -1,0 +1,4 @@
+/* pages/detail/detail.wxss */
+.content{
+    color: blue;
+}

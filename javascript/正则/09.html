@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 三个数字+天
+        123天
+        4324254天
+        */    
+       var reg=/\d{3}天/g;
+       var reg=/\d{3,4}天/g;
+       var p="2451天地金额少了附件432天";
+       console.log(p.replace(reg,"**"))   //2**地金额少了附件**
+
+       var reg=/\d{3,4}天/g;
+       var p="2451453天地金额少了附件432天";
+       console.log(p.replace(reg,"**"))    //**地金额少了附件**
+    </script>
+</body>
+</html>

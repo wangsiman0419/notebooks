@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj='{"name":"wang","age":18}';
+        var parseObj= JSON.parse(obj);
+        /* 将json格式的字符串转为json
+        JSON.parse */
+        console.log(parseObj)
+        /* JSON.stringify()-->可以将JSON对象转换为字符串 */
+        console.log(JSON.stringify(parseObj))
+    </script>
+</body>
+</html>

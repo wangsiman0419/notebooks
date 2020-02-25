@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* promise:背景：为了解决异步问题的诞生 */
+        function go(){
+            return new Promise((resolve,reject)=>{
+                resolve("success")
+                reject("fail")
+            })
+        }
+        go().then(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

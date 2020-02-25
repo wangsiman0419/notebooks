@@ -1,0 +1,8 @@
+/* components/ItemIcon/ItemIcon.wxss */
+.icon{
+    width: 36rpx;
+    height: 36rpx;
+}
+.more{
+    padding-left: 400rpx;
+}

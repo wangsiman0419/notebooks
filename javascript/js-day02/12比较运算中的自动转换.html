@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* >,<,>=,<=  比较运算返回的结果是boolean 
+        先将两边的值转换为Number在比较
+        */
+        var a=10;
+        var b="20"
+        var c="true"
+        console.log(a>b);   //false
+        /* Number(a)>Number(b) */
+        console.log(a>c)   //false 
+        /* Number(a)>Number(c)  10>NaN   NaN不能参与计算的，它和任何值做计算，结果都是NaN*/
+    </script>
+</body>
+</html>

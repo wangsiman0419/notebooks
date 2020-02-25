@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="aaha";
+        var reg=/a/g;
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //false
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //true
+
+
+       /* 不加g返回true */
+       /*  var str="aah";
+        var reg=/a/;
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //true
+        console.log(reg.test(str))    //true */
+    </script>
+</body>
+</html>

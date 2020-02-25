@@ -1,0 +1,15 @@
+img{
+    width: 240px;
+    height: 240px;
+}
+.container{
+    width:900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container>div{
+    width: 250px;
+    padding-bottom: 20px;
+}

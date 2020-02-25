@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function *go(x){
+            var y=yield x+2;
+            console.log(y);
+        }
+        var obj=go(3);
+        // obj.next()    //拿不到结果，结果在obj的对象里面
+        console.log(obj.next())   //{value: 5, done: false}
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <script>
+        /* ajax  从服务器上获取数据的一种技术  是异步的
+        1.创建ajax核心对象
+        2.与服务器建立连接
+        3.发送请求
+        4.响应
+        */
+       /* JSON.parse()  json格式的字符串转换为json对象 */
+       
+        var url="https://www.easy-mock.com/mock/5d67436224fd60626abfe906/ajax/base";
+        var xhr=new XMLHttpRequest();
+        xhr.open('get',url,true)  //true  异步
+        xhr.send()
+        xhr.onreadystatechange=function(){
+            /* console.log(xhr.readyState)
+            console.log(xhr.status) */
+            if(xhr.readyState==4 && xhr.status==200){
+                var res=JSON.parse(xhr.responseText);
+                console.log(res.data.name)
+                var name=document.getElementById("name")
+                name.innerHTML=res.data.name;
+            }
+        }
+        /* 
+        1.异步 同步  网络请求到底是用同步还是异步
+        2.ajax使用场景
+        3.如何使用ajax
+          */
+    </script>
+</body>
+</html>

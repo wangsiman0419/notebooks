@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 解构就是分解一个对象，等于号两边的key值一定是要一样的，可以传一个或多个，顺序也可以随意
+        key:value */
+        var obj={name:"wang",age:20,sex:"female"}
+        var {name,age,sex}=obj;
+        console.log(age)
+        function go({name,age,sex}){
+            console.log(sex)
+        }
+        go(obj)
+    </script>
+</body>
+</html>

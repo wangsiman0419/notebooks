@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 不需要程序员干预，js自动完成的类型转换
+        场景：主要在算术计算中 +，-，*，/，%
+         */
+         /* 1.在加运算中的自动转换 
+         算术计算中先将两边的变量转换为Number再计算   Number()
+         特殊：在加运算中，碰到字符串，+就会起到拼接符的作用 
+         */
+         var a=1;
+         var b=true;
+         var c="hello world";
+         var str=a+b;
+         var sum=a+c;
+         var d="2"
+         /* var str=a+Number(b); */
+         console.log(str);   //2
+         /* var sum=String(a+c) */
+         console.log(sum)   //1hello world
+         console.log(a+d);  //12
+    </script>
+</body>
+</html>

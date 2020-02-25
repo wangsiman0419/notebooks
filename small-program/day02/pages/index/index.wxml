@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<!-- <view class="container">
+ {{msg}}
+</view>
+<view wx:for="{{arr}}" wx:key="{{item}}"> 
+  {{item}}
+</view>
+<input type="text" 
+confirm-type="search"
+placeholder="请搜索" 
+bind:confirm="handleConfirm"
+focus="{{isFocus}}"/>
+
+<form bind:submit="handleSubmit">
+    <input type="text" name="keyword" placeholder="请搜索"/>
+    <button form-type="submit">搜索</button>
+</form>
+<view bind:tap="handleClick" >{{msg}}</view>
+<image bind:tap="handleMusic" src="{{isPlay?'/images/01.jpg':'/images/02.jpg'}}" >
+  
+</image>
+<view wx:if="{{test}}">测试wx:if</view> -->
+
+<view bind:tap="handleClick">{{msg}}</view>
+<input type="text"  forcus="{{isFocus}}" confirm-type="search"/>
+<!-- <form bind:submit="handleSubmit">
+    <input type="text" name="keyword" placeholder="请搜索"/>
+    <button form-type="submit">搜索</button>
+</form> -->

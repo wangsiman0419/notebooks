@@ -1,0 +1,21 @@
+/**index.wxss**/
+.item image{
+  width:230rpx;
+  height: 300rpx;
+}
+.item{
+  width:230rpx;
+}
+.container{
+  padding:120rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.end{
+  z-index: 100;
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  width:750rpx;
+}

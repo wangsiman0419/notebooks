@@ -1,0 +1,18 @@
+/* pages/mv/mv.wxss */
+.container{
+    padding: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item{
+    width: 220rpx;
+    margin-top: 20rpx;
+}
+.item image{
+    width: 220rpx;
+    height: 220rpx;
+}
+text{
+    font-size: 30rpx;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- 过滤器 -->
+    <!-- toFixed(2)  小数点后两位 -->
+    <div id="app">
+        {{msg | format(3)}}
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                msg:99.2451
+            },
+            filters:{
+                /* val就是msg   params就是管道修饰符("|")后面函数传递过来的参数*/
+                format(val,params){
+                    return "$"+val.toFixed(params);   
+                }
+            }
+        })
+    </script>
+</body>
+</html>

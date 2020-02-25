@@ -1,0 +1,5 @@
+/**index.wxss**/
+.icon{
+    width: 35rpx;
+    height: 35rpx;
+}

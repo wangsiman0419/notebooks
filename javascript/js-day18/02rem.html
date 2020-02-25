@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.4.1/??flexible_css.js,flexible.js"></script>
+</head>
+<body>
+    <script>
+        /* css能够布局的width */
+        var layoutWidth=window.innerWidth;     //视图布局宽度
+        var deviceWidth=window.screen.width;   //设备宽度
+        /* 设备像素比=layoutWidth/deviceWidth */
+        var dpr=window.devicePixelRatio;     //设备像素比
+        console.log(layoutWidth)
+        console.log(deviceWidth)
+        console.log(dpr)
+    </script>
+</body>
+</html>

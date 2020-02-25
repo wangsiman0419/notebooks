@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0}
+        .container{
+            width: 500px;
+            margin: 100px auto;
+            border: 1px solid #333;
+            padding: 20px;
+            position: relative;
+        }
+        img{
+            width: 500px;
+            vertical-align: bottom;
+        }
+        .modal{
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            z-index: 100;
+            background: #333;
+            opacity: .2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/luntan04.jpg" alt="">
+        <div class="modal">
+
+        </div>
+    </div>
+    <script>
+        /* 如何获取样式表中的样式 getComputedStyle(obj).attr*/
+        /* 1.onmouseover当鼠标悬停在上面的时候透明度增加到80% 每50毫秒增加2%  增加到80%的时候停止动画*/
+        /* 2.onmouseout 每50毫秒减少2%  减到20%的时候停止动画 */
+        var container=document.getElementsByClassName("container")[0];
+        var modal=document.getElementsByClassName("modal")[0];
+        var opacity=getComputedStyle(modal).opacity*100;
+        var timer=null;
+        // console.log(opacity)
+        container.onmouseover=function(){
+            animate(80,2)
+        }
+        container.onmouseout=function(){
+            animate(20,-2)  
+        }
+        /* targetValue 目标值   addValue  附加值*/
+        function animate(targetValue,addValue){
+            clearInterval(timer);
+            timer=setInterval(function(){
+                if(opacity==targetValue){
+                    clearInterval(timer)
+                }else{
+                    opacity=opacity+addValue;
+                    modal.style.opacity=opacity/100
+                }
+            },50)
+        }
+    </script>
+</body>
+</html>

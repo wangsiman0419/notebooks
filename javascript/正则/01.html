@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 规则字符串出现规律的表达式 -->
+</head>
+<body>
+    <script>
+        /* g:global是全局的 */
+       var reg=/傻/g;
+       var p="你傻呀，你怎么这么傻呢";
+       /* replace(reg,str) */
+       var res=p.replace(reg,"**");
+       console.log(res)
+    //    var str="hello world"    //h--g
+    //    console.log(str.replace("h","g"))    //gello world
+    </script>
+</body>
+</html>

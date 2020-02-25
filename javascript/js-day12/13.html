@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cities=[{spell:"tianmen",city:"天门"},{spell:"tianjin",city:"天津"},{spell:"tianshan",city:"天山"},
+    {spell:"suizhou",city:"随州"}]    
+    /* 天或tian  开头的  将city添加到一个数组中 */
+    /* var allCities=[] */
+    var allCities=[];
+    cities.forEach(item=>{
+        if(item.spell.startsWith("t") || item.city.startsWith("天")){
+            allCities.push(item.city)
+        }
+    })
+    console.log(allCities)
+    </script>
+</body>
+</html>

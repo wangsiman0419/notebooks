@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="tabs">
+      <view class="item {{currentIndex==index?'active':''}}" wx:for="{{tabs}}" wx:key="{{item}}"
+      data-index="{{index}}" bind:tap="handleItem" >
+          {{item}}
+      </view>
+  </view>
+  <view wx:if="{{currentIndex==0}}">首页的内容</view>
+  <view wx:if="{{currentIndex==1}}">电影的内容</view>
+  <view wx:if="{{currentIndex==2}}">音乐的内容</view>
+</view>

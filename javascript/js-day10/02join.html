@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        join、slice()、indexOf和concat方法 不能改变数组的结构
+        join(separatar)   //separatar：分隔符,分隔数组的每一项
+    -->
+    <script>
+        var arr=[1,2,3]
+        var str=arr.join("");
+        console.log(str)     //123
+        console.log(arr.join())   //返回原数组  1，2，3
+        console.log(arr.join("/"))   //  1/2/3
+    </script>
+</body>
+</html>

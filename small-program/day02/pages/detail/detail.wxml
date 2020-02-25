@@ -1,0 +1,5 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+<text class="content" selectable="false" space="false" decode="false">
+    我
+</text>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* match,search,replace,split */
+        /* 正则表达式后面的为修饰符，i:ignore--忽略大小写，g：global--全局匹配 */
+        var p="hello worldL";
+        var reg=/l/ig;
+        console.log(p.match('l'));    //["l", index: 2, input: "hello worldL", groups: undefined]
+        console.log(p.match(reg))     //'l','l','l','L'
+        /* 它是垃圾，见到垃圾就要扔了
+        1. 见到垃圾就替换成** 
+        2.将垃圾这两个字提取出来，作为一个数组
+        */
+        var reg=/垃圾/g;
+        var p="它是垃圾，见到垃圾就扔了";
+        var res=p.replace(reg,"**")
+        console.log(res)    //它是**，见到**就扔了
+        console.log(p.match(reg))   //(2) ["垃圾", "垃圾"]
+
+    </script>
+</body>
+</html>

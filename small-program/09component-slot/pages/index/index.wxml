@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+   <v-item data="热门歌曲" bindtap="handleClick">
+     <image class="icon" slot="icon" src="/images/icons/recmd@2x.png"></image>
+   </v-item>
+   <v-item data="最新音乐">
+      <image class="icon" slot="icon" src="/images/icons/newest@2x.png"></image>
+   </v-item>
+   <v-item data="主播电台">
+      <image class="icon" slot="icon" src="/images/icons/radio@2x.png"></image>
+   </v-item>
+</view>

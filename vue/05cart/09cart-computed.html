@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name=referrer content=never>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .img{
+            width: 30px;
+            height: 50px;
+        }
+        .name{
+            font-size: 13px;
+        }
+        .number{
+            width: 40px;
+        }
+        .delete{
+            width: 70px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+ <div id="app" class="container">
+    <h2 class="text-center text-success">购物车</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>全选 <input type="checkbox" v-model="checkAll" ></th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(item,index) of products">
+                <td> <input type="checkbox" v-model="item.isSelected"></td>
+                <td class="name"><img class="img" :src="item.productCover" alt=""></img>{{item.productName}}</td>
+                <td>{{item.productPrice}}</td>
+                <td><input type="number" class="number" min="1" v-model.number="item.productCount"></td>
+                <td>{{item.productPrice*item.productCount | format(2)}}</td>
+                <!-- <td><button class="delete btn-danger" @click="handleDelete(index)">删除</button></td> -->
+                <td><button class="delete btn-danger" @click="handleDelete(item)">删除</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="text-left">总价格:{{sum | format(2)}}</p>
+</div>
+    <script>
+        /* ctrl+shift+p */
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                products:[],
+            },
+            //页面装载时执行
+            mounted() {
+                axios.get('http://yapi.demo.qunar.com/mock/34774/').then(res=>{
+                  return this.products=res.data;
+                })
+            },
+            filters:{
+                format(val,params){
+                    return "$"+val.toFixed(params);   
+                }
+            },
+            computed: {
+                checkAll:{
+                    get(){    //下面的每一个checkbox都要满足相同的条件，全选按钮才会起作用
+                        return this.products.every(item=>item.isSelected)
+                    },
+                    set(val){    //全选按钮控制下面的所有checkbox
+                        this.products.forEach(item=>item.isSelected=val)
+                    }
+                },
+                sum(){
+                    var total=0;
+                    this.products.forEach(item=>{
+                        total=item.productCount*item.productPrice+total
+                    })
+                    return total
+                }
+            },
+            methods: {
+               /*  handleDelete(index){
+                  this.products.splice(index,1)
+                } */
+                handleDelete(item){    //通过下标值删除
+                    var products=this.products.filter(value=>value!==item);
+                    this.products=products;
+                }
+            },
+        })
+    </script>
+</body>
+</html>

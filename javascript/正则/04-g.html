@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Tips:test()方法为局部匹配而生，如果使用test方法最好就不要加g，它是一段一段匹配的 */
+        var str="aaha";
+        /* aaha */
+        /* aha */
+        /* ha */
+        /* 再轮回 */
+        var reg=/a/g;
+         while(reg.test(str)){
+             /* lastIndex:是当前表达式匹配内容的最后一个字符的下一个位置 */
+             console.log(reg.lastIndex)    //1, 2, 4
+         }
+         console.log(reg.test(str))    //下标1   true
+         console.log(reg.test(str))    //2       true
+         console.log(reg.test(str))    //4       true
+         console.log(reg.test(str))    //0       false
+    </script>
+</body>
+</html>

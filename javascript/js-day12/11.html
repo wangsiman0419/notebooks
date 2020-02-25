@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj=[{name:"晓",age:19},{name:"红",age:13},{name:"丽",age:18}]    
+        /* allName="晓/红/丽" */
+        /* var all=[];
+        obj.forEach(item=>{
+            var i=item.name;
+            all.push(i)
+        })
+        console.log(all.join("/")) */
+        var newArr=obj.map(item=>{
+            return item.name
+        })
+        console.log(newArr.join("/"))
+    </script>
+</body>
+</html>

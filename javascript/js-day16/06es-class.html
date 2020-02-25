@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        Person.prototype.sayName=function(){
+            this.name;
+        } */
+
+        /* es6的方法 */
+        
+        class Person{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            sayName(){
+                console.log(this.name)  //lisi
+            }
+        }   
+        /* 使用extends关键字可以实现继承，之后可以自动拥有父类的属性和方法 */
+        class Student extends Person{
+            constructor(name,age,skill){
+                super(name,age);   //super指的是Person
+                this.skill=skill
+            }
+           /*  //子类下的函数
+              saySkill(){
+                console.log(this.skill)
+            } */
+        } 
+        var wang=new Person("wangsiman",18);
+        // /* 父类不能使用子类的方法，子类可以使用父类的方法 */
+        // wang.saySkill()
+        var s=new Student("lisi",17,"html")
+        s.sayName()
+        console.log(s)  //Student("lisi",17,skill:"html")
+    </script>
+</body>
+</html>

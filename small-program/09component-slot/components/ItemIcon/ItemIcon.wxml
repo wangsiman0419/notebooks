@@ -1,0 +1,7 @@
+<!--components/ItemIcon/ItemIcon.wxml-->
+<view>
+    <slot name="icon"></slot>
+    <text>{{data}}</text>
+    <text class="more">更多></text>
+</view>
+

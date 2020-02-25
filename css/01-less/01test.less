@@ -1,0 +1,48 @@
+//  1.声明变量 
+@fontColor:"#c20c0c";
+@bgColor:"#c22ccc";
+@width:0.5;
+@import:"color";
+/* 4.Maps */
+#colors(){
+    primaryColor:#337ab7;
+    successColor:#5cb85c;
+    infoColor:#5bc0de;
+    dangerColor:#d9534f;
+}
+body{
+    @bgColor:"#999";
+    background: @bgColor;
+    color: #colors[primaryColor];
+}
+/* 2.mixin  --一大段复用的css代码 */
+.wh(@w:100px,@h:150px){
+    width: @w;
+    height: @h;
+}
+.one{
+    .wh();
+    /* 3.嵌套 本质上后代 */
+    &:hover{
+        color:red;
+    }
+    .child{
+        border: 1px solid #333;
+    }
+}
+.two{
+    .wh(150px,150px)
+}
+.three{
+    width:percentage(@width)
+}
+.four:extend(.two){
+    border:1px solid #333;
+}
+.gen-col(@n) when(@n>0){
+    .col-@{n}{
+        width: 100%/12*@n;
+    }
+    .gen-col(@n - 1);
+}
+.gen-col(12);

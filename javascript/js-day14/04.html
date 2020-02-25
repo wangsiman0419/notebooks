@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1.async关键字可以将一个普通函数变为promise
+        2.    
+     */
+        async function getCat(){
+            return "华语"
+        }
+        async function detail(){
+            return "detail"
+        }
+        async function url(){
+            return "url"
+        }
+        async function getRes(){
+            var cat =await getCat();
+            console.log(cat)
+            var details=await detail();
+            console.log(details);
+            var Url=await url();
+            console.log(Url);
+        }
+        getRes();
+    </script>
+</body>
+</html>

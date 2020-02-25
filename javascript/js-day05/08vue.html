@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- 1.数据驱动，不用频繁的操作DOM
+    vue中  属性如果要接收一个变量的时候前面要放置一个冒号 -->
+    <div id="app">
+        <p><input type="text" v-model="keyword"><button @click="handleApp">添加</button></p>
+        <p>{{keyword}}</p>
+        <ul>
+            <li v-for="item  of arr"
+            :data-index="index"  
+            @click="handleDelete">{{item}} -{{index}}</li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                arr:["小米","华为","苹果"],
+                keyword:""
+            },
+            methods:{
+                handleApp(){
+                   this.arr.push(this.keyword)
+                },
+                handleDelete(event){
+                    var index=event.target.dataset.index;
+                    this.arr.splice(index,1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

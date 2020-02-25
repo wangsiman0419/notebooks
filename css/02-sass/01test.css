@@ -1,0 +1,11 @@
+/* 继承 */
+.one,
+.block {
+  width: 100px;
+  height: 100px;
+}
+/* 获取宽高 */
+.block {
+  width: 100px;
+  height: 100px;
+}

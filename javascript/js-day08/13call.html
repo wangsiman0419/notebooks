@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* call(thisObj改变this对象,params传递的参数) */
+        function sayName(label){
+            console.log(label+":"+this.name)
+        }
+        var name="window";
+        var cheng={
+            name:"cheng"
+        }
+        var wang={
+            name:"wang"
+        }
+        sayName("window")    //window:window
+        sayName.call(cheng,"男孩子")    //男孩子：cheng
+        sayName.call(wang,"女孩子")     //女孩子:wang
+    </script>
+</body>
+</html>

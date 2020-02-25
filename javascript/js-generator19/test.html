@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function* go(x) {
+            var y = yield x + 2;
+            console.log(y);
+            var z = yield y;
+            console.log(z);
+            return 4;
+        }
+        var obj = go(3);
+        console.log(obj.next()); //第一次传值是没用的,传给上一次yeild的执行结果
+        console.log(obj.next(7));
+        console.log(obj.next(8))
+
+        //{value: 5, done: false}
+        //7
+        //{value: 7, done: false}
+        //8
+        // {value: 4, done: true}
+    </script>
+</body>
+
+</html>

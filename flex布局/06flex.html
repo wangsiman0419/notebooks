@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         .parent{
+            display: flex;
+            width: 400px;
+            height: 400px;
+            background: red;
+            /* justify-content:
+            space-around:每个子元素两侧的间隔相等。所以，子元素之间的间隔比子元素与父元素的间隔大一倍。
+            space-between:两端对齐父元素，子元素之间的间隔都相等。
+            space-evenly:子元素与父元素之间间隔相等
+             */
+            justify-content: space-between;
+         }
+         .parent>div{
+             width: 100px;
+             height: 40px;
+             border: 1px solid #333;
+         }
+    </style>
+</head>
+<body>
+    <div class="parent">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+</body>
+</html>

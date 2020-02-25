@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- 如果要得到checkbox的状态，要用change事件 -->
+    <div id="app">
+      <input type="checkbox" v-model="checkState" @change="change">
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                checkState:false
+            },
+            methods: {
+                change(){
+                    console.log(this.checkState)
+                }
+            },
+        })
+    </script>
+</body>
+</html>

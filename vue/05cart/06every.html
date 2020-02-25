@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <script>
+        /* every只有所有条件都满足的时候才返回true */
+        var obj=[{name:'wang',checked:false},{name:'li',checked:true}];
+        var arr=[1,2,3,4]
+        var checked=obj.every(item=>item.checked);
+        var b=arr.every(item=>item>1);
+        console.log(checked)     //false
+        console.log(b)           //false
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.form{
+  display: flex;
+  padding: 10px 20px;
+  background: black;
+}
+input{
+  height: 100rpx;
+}
+.search-wrap{
+    border: 1px solid #333;
+    border-radius: 40rpx;
+    flex: 1;
+    background: #fff;
+}
+button{
+  width: 180rpx;
+  border-radius: 40rpx;
+  border: none;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.search-wrap .photo{
+  height: 80rpx;
+  width:80rpx;
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+/* .left .about-aritst{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+.content .number{
+  width: 20rpx;
+  text-align: left;
+  font-size: 40rpx;
+  color: #c20c0c;
+  margin-right: 10rpx;
+}
+.item-bg{
+  height: 120rpx;
+  width: 120rpx;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+.play{
+  height: 80rpx;
+  width: 80rpx;
+}
+.item{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(223, 222, 222);
+}
+.item .left{
+  /* width: 355rpx; */
+  display: flex;
+  align-items: center;
+}
+.item .left view{
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item .right{
+  display: flex;
+  align-items:center;
+}
+.item .play{
+  margin-left: 20px;
+}
+.name{
+  color: rgb(69, 162, 233);
+  font-size: 35rpx;
+}
+.artist{
+  font-size: 30rpx;
+}

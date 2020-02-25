@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 上海，上天，上去--** */
+        /* 备选字符集：规定某一位字符的备选字符列表 
+        特点：多选一
+        */
+        var reg=/上[海,天,去]/g
+        var str="我要去上海，我要上去东方明珠，去上天";
+        console.log(str.replace(reg,"**"))    //我要去**，我要**东方明珠，去**
+
+        /*eg: 中国人民共和国成立了，中共很厉害，大中华厉害
+        中国，中共，中华--666
+         */
+        var reg=/中[国,共,华]/g;
+        var str="中国人民共和国成立了，中共很厉害，大中华厉害"
+        console.log(str.replace(reg,"666"))
+    </script>
+</body>
+</html>

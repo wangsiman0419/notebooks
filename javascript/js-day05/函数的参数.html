@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x=20;
+        /* 函数的参数是局部变量 */
+        function go(x,y){
+            console.log(x);  //  30  x从最近的局部开始找，找不到的话就去全局变量找
+            console.log(x+y)  //70
+        }
+        go(30,40)
+
+
+        /* var x=20;
+        function go(y){
+            console.log(x);  //20  x在局部变量中没有定义，所以要去全局变量中找 x=20
+        }
+        go(30,40) */
+    </script>
+</body>
+</html>

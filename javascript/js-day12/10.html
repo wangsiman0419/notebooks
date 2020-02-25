@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="let's go home";
+        /* s'tel og emoh */
+        /* ["let's","go","home"] */
+        /* [[l,e,t,s],[g,o],[h,o,m,e]] */
+        /* reserve
+        [[s,',t,e,l],[o,g],[e,m,o,h]]
+        */
+       /* join
+       ["s'tel","og","emoh"] */
+       /* join
+       s'tel og emoh */
+        var arr=str.split(" ");
+        var all=[];
+        arr.forEach(item=>{
+            let i=item.split("").reverse().join("")
+            all.push(i)
+        })
+        console.log(all.join(" "))
+        
+    </script>
+</body>
+</html>

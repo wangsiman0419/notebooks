@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        /* 2019-09-19 09:00:00 */
+        setInterval(function(){
+            var oDate=new Date();
+            var playTime=new Date("2019-09-19 09:00:00").getTime();//毫秒
+            var mill=oDate.getTime();
+            var gapTime=playTime-mill;
+            var seconds=Math.floor(gapTime/1000);
+            var hours=Math.floor(seconds/3600);
+            seconds=seconds%3600;
+            var minutes=Math.floor(seconds/60)
+            seconds=seconds%60;
+            function transform(params){
+                return params<10?"0"+params:params;
+            }
+            var sum=transform(hours)+":"+transform(minutes)+":"+transform(seconds);
+            document.getElementById("p").innerHTML=sum;
+           
+        },1000)
+    </script>
+</body>
+</html>

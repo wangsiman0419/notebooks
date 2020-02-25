@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/co/4.1.0/index.js"></script>
+</head>
+<body>
+    <script>
+        /*generator 必须要结合co这个库来用 */
+      async  function go(x){
+            return x;
+        }
+        co(function *(){
+            var data=yield go(3);
+            console.log(data);    //3
+            var y=yield go(4);
+            console.log(y)       //4
+        })
+    </script>
+</body>
+</html>

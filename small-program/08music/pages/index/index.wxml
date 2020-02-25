@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+   <view class="item" wx:for="{{playlists}}" wx:key="item.id">
+      <image src="{{item.coverImgUrl}}"></image>
+      <text>{{item.name}}</text>
+   </view>
+</view>
+<view class="container-albums">
+    <view class="items" wx:for="{{albums}}" wx:key="item.id">
+        <image src="{{item.picUrl}}"></image>
+        <text>{{item.artist.alias}}</text>
+    </view>
+</view>

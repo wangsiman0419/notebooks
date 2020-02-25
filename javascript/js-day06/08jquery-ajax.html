@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"> </script>
+    <style>
+        body{
+             background: pink; 
+        }
+        #loading{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff1ce;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <img src="images/giphy.gif" alt="">     
+    </div>
+    加载成功
+    <script>
+        var url="https://www.easy-mock.com/mock/5d67436224fd60626abfe906/ajax/base"
+        /* ajax传参
+        1.请求的地址
+        2.请求的方式 get,post
+        3.数据类型
+        */
+        $.ajax({
+            url:url,
+            type:"get",
+            dataType:"json",
+            /* 实现加载画面 */
+            success:function(res){
+                console.log(res)
+                $("#loading").hide()
+            },
+            fail:function(err){
+                console.log(err)
+            },
+            beforeSend:function(){
+                $("#loading").show()
+            }     
+        })
+        </script>
+</body>
+</html>

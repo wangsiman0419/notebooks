@@ -1,0 +1,4 @@
+/* pages/mvPlay/mvPlay.wxss */
+video{
+    width: 750rpx;
+}

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <form bind:submit="handleSubmit">
+    <view class="form">
+        <view class="search-wrap">
+             <image class="photo" src="/images/01.jpg"></image>
+             <input type="text" name="keyword" placeholder="请搜索"/>
+        </view>
+        <button form-type="submit">搜索</button>
+    </view>
+  </form>
+</view>
+<view class="content" >
+  <view class="item" wx:for="{{musics}}" wx:key="{{key}}" 
+    data-index="{{index}}"
+    bind:tap="handlePlay" >
+    <view class="left">
+        <text class="number" >{{index+1}}</text>
+        <image class="item-bg" src="/images/02.JPG" ></image>
+        <view >
+            <text class="name" >{{item.name}}</text>
+            <view class="artist">by:<text>{{item.artistName}}</text></view>
+        </view>
+    </view>
+    <view class="right">
+        <text>{{item.time}}</text>
+        <image class="play" src="{{isPlay && prevId==item.id?'/images/04.JPG':'/images/03.JPG'}}" ></image>
+    </view>
+  </view>
+</view>

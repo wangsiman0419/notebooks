@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background: yellow;
+        }
+        #test{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            top:20px;
+            left: 100px;
+            padding: 20px;
+            border:10px solid #333;
+        }
+    </style>
+</head>
+<body>
+   <div id="parent">
+       <div>
+           <div id="test">hello world</div>
+       </div>
+   </div>
+   <script>
+       /* offsetParent  获取给了定位的定位的父级 
+          offsetLeft   返回元素的相对定位父元素水平偏移位置  返回number
+          offsetTop    返回元素的相对定位父元素水平垂直偏移位置
+       */
+       var test=document.getElementById("test");
+       console.log(test.offsetParent)
+       console.log(test.offsetLeft);  //100
+       console.log(test.offsetTop)    //20
+       console.log(test.offsetWidth)  //160
+    </script>
+</body>
+</html>

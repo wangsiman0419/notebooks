@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 正则表达式默认是贪婪的,如果要改成非贪婪的就加一个? */
+        var str="1594545eghe";
+        var reg=/\d{3,6}/;
+        console.log(str.replace(reg,"*"))   //*eghe
+        /* 非贪婪模式，量词后面加？ */
+        console.log(str.replace(/\d{3,6}?/,"*"))   //*45eghe
+    </script>
+</body>
+</html>

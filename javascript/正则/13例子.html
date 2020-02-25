@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1.字符集
+        2.量词
+        3.匹配位置
+        /^ $/ 如果加在正则中间会执行严格匹配
+        */    
+       var reg=/\d{11}/
+       var str="wr1587179414945tsg"
+       console.log(reg.test(str))
+
+       var reg=/^\d{11}$/
+       var str="wr1587179414945tsg"
+       console.log(reg.test(str))
+    </script>
+</body>
+</html>

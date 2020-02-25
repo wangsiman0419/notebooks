@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <img src="01.jpg" alt="">
+    <img src="02.jpg" alt="">
+    <img src="03.jpg" alt="">
+    <img src="04.jpg" alt="">
+    <script>
+        var items=$("img")
+        console.log(items)
+        /* map */
+        var arr=[1,2,3];
+        var newArray=arr.map((item)=>item*4);
+        console.log(newArray)    //[4,8,12]
+        var arr=[...items];
+        var urls=arr.map(item=>{
+            return $(item).attr("src");
+        })
+        console.log(urls)     //["01.jpg","02.jpg","03.jpg","04.jpg"]
+           
+    </script>
+</body>
+</html>

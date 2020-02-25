@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 改变函数内部的this关键字的指向 */    
+        var name="wang";   //全局变量  是window下的属性
+        var obj={
+            name:"li"
+        }
+       
+        /* var test=function(){
+            console.log(this.name)   //test是window下的方法  实际是window.name  输出wang
+        }
+        test()
+ */
+
+     /* bind()改变了函数内部this执行的上下环境 */
+        var test=function(){
+            console.log(this.name)   //this指向了obj  输出结果为li
+        }.bind(obj);     
+        test()
+    </script>
+</body>
+</html>

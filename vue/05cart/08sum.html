@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var arr=[{price:4,count:2},{price:5,count:3},{price:7,count:2}];
+       function sum(arr){
+           var total=0;
+           arr.forEach(item=>{
+               total=item['price']*item['count']+total
+           })
+           return total;
+       }
+       console.log(sum(arr))   //37
+    </script>
+</body>
+</html>

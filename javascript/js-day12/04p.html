@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 回调函数是一个异步处理过程 */
+        var p=new Promise((resolve,reject)=>{
+            resolve("success");
+            reject("失败")
+        })
+        p.then(res=>{
+            console.log(res)
+        })
+        console.log("4")
+        /* 输出结果:
+                   4  
+                success */
+    </script>
+</body>
+</html>

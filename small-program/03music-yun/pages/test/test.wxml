@@ -1,0 +1,6 @@
+<!--pages/test/test.wxml-->
+<view>
+    <text>你</text>
+    <image></image>
+    <text>{{obj.time}}</text>
+</view>

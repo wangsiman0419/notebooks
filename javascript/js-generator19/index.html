@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function *go(){
+            console.log("a");
+            return 2;
+        }
+        // done表示generate函数是否执行完毕，value是generate函数的返回值
+        var obj=go();
+        console.log(obj.next())
+        /* 返回值
+        a
+        {value:2,done:true}
+         */
+    </script>
+</body>
+</html>

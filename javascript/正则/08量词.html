@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 量词就是规定某一位字符出现的次数 
+        {3}      --必须3个
+        {3,6}    --3到6个
+        {3,}     --3个以上
+        */    
+        var reg=/\d{3}/
+        var str="1445ddges";
+        console.log(reg.test(str))    //true
+
+        var reg=/\d{3,6}/
+        var s="1486456ges";
+        console.log(reg.test(s))     //false
+    </script>
+</body>
+</html>

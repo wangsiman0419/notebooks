@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{
+            width: 250px;
+            height: 35px;
+            border-radius: 30px;
+            outline: none;
+            padding-left: 10px;
+            border: 1px solid #333;
+        }
+        img{
+            width: 250px;          
+        }
+    </style>
+    <script src="lib/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <input type="text" id="input" placeholder="请搜索">
+    <div>
+        <img src="" alt=""><br>
+        <audio src="" controls="controls" autoplay></audio>
+    </div>
+    <script>
+        var url="https://music.aityp.com/";
+        var input=document.getElementById("input");
+        input.onkeydown=function(event){
+            if(event.keyCode==13){
+                console.log(this.value)
+                /* 1.获取id */
+                $.ajax({
+                    url:`${url}search?keywords=${this.value}`,
+                    type:'get',
+                    dataType:"json",
+                    success:res=>{
+                        var id=res.result.songs[0].id;
+                        /* 2.获取imgUrl */
+                        $.ajax({
+                            url:`${url}song/detail?ids=${id}`,
+                            type:"get",
+                            dataType:"json",
+                            success:res=>{
+                                var imgUrl=res.songs[0].al.picUrl;
+                                $("img").attr("src",imgUrl)
+                            }
+                        })
+                        /* 3.获取音乐的url */
+                        $.ajax({
+                            url:`${url}song/url?id=${id}`,
+                            type:"get",
+                            dataType:"json",
+                            success:res=>{
+                                var musicUrl=res.data[0].url;
+                                $("audio").attr("src",musicUrl)
+                            }
+                        
+                        })
+                   }
+                })
+            }
+        }
+    </script>
+</body>
+</html>

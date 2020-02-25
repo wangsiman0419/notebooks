@@ -1,0 +1,14 @@
+/**index.wxss**/
+.tabs{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.tabs>.item{
+   text-align: center;
+   line-height: 40px;
+  
+}
+.active{
+  color: rgb(139, 4, 4);
+  border-bottom: 2px solid rgb(139, 4, 4);
+}
